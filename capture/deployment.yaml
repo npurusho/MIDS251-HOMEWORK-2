@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cam
+spec:
+  selector:
+    matchLabels:
+      app: cam
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: cam
+    spec:
+      containers:
+      - name: cam
+        image: naveen/image
+        ports:
+        - containerPort: 80
