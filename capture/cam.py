@@ -21,7 +21,7 @@ while(True):
        roi_gray = gray[y:y+h, x:x+w]
        roi_color = frame[y:y+h, x:x+w]
 
-    # Display the resulting frame
+    # Display the resulting frame/s
     cv2.imshow('frame',frame)
     if cv2.waitKey(30) & 0xFF == ord('q'):
         break
